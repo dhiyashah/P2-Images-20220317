@@ -1,29 +1,44 @@
-//Variables
+//Global Variables
+float imageX, imageY, imagedisplayWidth, imagedisplayHeight, imageWidthRatio=0.0, imageHeightRatio=0.0;
+float largerDimension, smallerDimension;
 PImage pic;
-float imageStartWidth, imageStartHeight, imageWidth, imageHeight;
-float imageWidthRatio, imageHeightRatio;
-int largerDimension;;
+Boolean displayWidthLarger = false, displayHeightLarger = false;
 //
-//Geometry 
 fullScreen(); //size(600,300), displayWidth & displayHeight //Square, Landscape, or Portrait 
-println(width, height);
-//
-//Variable Population
-pic = loadImage("191088372c311967bfb2ebcbfb488ebc.jpg"); //Dimension: 800 Width, 600 Height 
-//See Sandbox 
-//Similar to if (width >= height) { largerDimension = width; smallerDimension = height; } else {largerDimension = height; smallerDimension = width;}
-imageWidthRatio = float ( largerDimension / largerDimension ); //must be decimals due to float, larger # for aspect ratio, similar to style="width:100%"
-imageHeightRatio = float ( smallerDimension / largerDimension ); //must be decimals due to float, <1 for aspect ratio, similar to style="height:auto"
-imageStartWidth = width*0;
-imageStartHeight = height*0;
-imageWidth = width*imageWidthRatio; //Aspect Ratio
-imageHeight = width*imageHeightRatio; //AspectRatio
-//Basic Error: Image must be smaller than the Canvas or Display 
-if ( imageWidth > width ) println("ERROR: Image is too wide");
-if (imageHeight > height) println("Image display issues");
+println(displayWidth, displayHeight);
+//Population
+pic = loadImage("191088372c311967bfb2ebcbfb488ebc.jpg"); //Dimensions: width 700, height 500(>) , Dimensions: 500,500 (=)
+//Find the larger dimension for aspect ration
+int picdisplayWidth = 500;
+int picdisplayHeight = 500;
+if ( picdisplayWidth >= picdisplayHeight ) {
+  largerDimension = picdisplayWidth;
+  smallerDimension = picdisplayHeight;
+  displayWidthLarger = true;
+} else {
+  largerDimension = picdisplayHeight;
+  smallerDimension = picdisplayWidth;
+  displayHeightLarger = true;
+} //End Dimension Comparison
+println(smallerDimension, largerDimension, displayWidthLarger, displayHeightLarger); //Verifyinh Variable Details 
+//Note: single line IFs cam be summarized to IF-ELSE or IF-ELSEIF-ELSE
+if ( displayWidthLarger == true ) imageWidthRatio = largerDimension / largerDimension;
+if ( displayWidthLarger == true ) imageHeightRatio = smallerDimension / largerDimension; 
+if ( displayHeightLarger == true ) imageHeightRatio = largerDimension / largerDimension; 
+if ( displayHeightLarger == true ) imageWidthRatio = smallerDimension / largerDimension;
+println(imageWidthRatio, imageHeightRatio, smallerDimension / largerDimension, 500/500); //Verify variable values 
+//Note: println() also verifies decimal places, compiler will truncate 
+//Answers must be 1.0 and between 0 & 1 (decimal)
+//Ratio 1.0 similar to style="width:100%" (websites)
+//Ratio "0.75" similar to style="height:auto" (websites)
+imageX = width*0;
+imageY = height*0;
+imagedisplayWidth = width*imageWidthRatio;
+imagedisplayHeight = height*imageHeightRatio;
+if (imagedisplayWidth >= width) println("ERROR: Image is too wide"); ; //Display Checker
+if (imagedisplayHeight >= height) println("ERROR: Image is too high"); ; //Display Checker
+
 //
 //Rectangle Layout 
-//rect(imageStartWidth, imageStartHeight, imageWidth, imageHeight); //Presentation is landscape 
-//
-//Printing Image to Screen 
-image(pic, imageStartWidth, imageStartHeight, imageWidth, imageHeight);
+rect(imageX, imageY, imagedisplayWidth, imagedisplayHeight);
+image(pic, imageX, imageY, imagedisplayWidth, imagedisplayHeight);
