@@ -9,7 +9,7 @@ fullscreen(); //size(600,300), displayWidth & displayHeight //Square, Landscape,
 println(width, height);
 //
 //Variable Population
-pic = loadImage("i.pinimg.com/originals/19/10/88/191088372c311967bfb2ebcbfb488ebc.jpg"); //Dimension: 800 Width, 600 Height 
+pic = loadImage("191088372c311967bfb2ebcbfb488ebc.jpg"); //Dimension: 800 Width, 600 Height 
 //See Sandbox 
 //Similar to if (width >= height) { largerDimension = width; smallerDimension = height; } else {largerDimension = height; smallerDimension = width;}
 imageWidthRatio = float ( largerDimension / largerDimension ); //must be decimals due to float, larger # for aspect ratio, similar to style="width:100%"
