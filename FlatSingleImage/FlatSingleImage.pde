@@ -5,7 +5,7 @@ float imageWidthRatio, imageHeightRatio;
 int largerDimension;;
 //
 //Geometry 
-fullscreen(); //size(600,300), displayWidth & displayHeight //Square, Landscape, or Portrait 
+fullScreen(); //size(600,300), displayWidth & displayHeight //Square, Landscape, or Portrait 
 println(width, height);
 //
 //Variable Population
