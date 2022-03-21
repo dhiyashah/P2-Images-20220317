@@ -43,12 +43,12 @@ println(smallerPic1Dimension, largerPic1Dimension, smallerPic2Dimension, largerP
 // Note: single line IFs cam be summararized to IF-ELSE or IF-ELSEIF-ELSE
 if ( widthPic1Larger == true ) imageWidthRatioPic1 = largerPic1Dimension / largerPic1Dimension; 
 if ( widthPic1Larger == true ) imageHeightRatioPic1 = smallerPic1Dimension / largerPic1Dimension;
-if ( heightPic1Larger == true ) imageHeightRatioPic1 = largerPic1Dimension / largerPic1Dimension; 
 if ( heightPic1Larger == true ) imageWidthRatioPic1 = smallerPic1Dimension / largerPic1Dimension; 
-if ( widthPic2Larger == true ) ; 
-if ( widthPic2Larger == true ) ; 
-if ( heightPic2Larger == true ) ; 
-if ( heightPic2Larger == true ) ; 
+if ( heightPic1Larger == true ) imageHeightRatioPic1 = largerPic1Dimension / largerPic1Dimension; 
+if ( widthPic2Larger == true ) imageWidthRatioPic2 = largerPic2Dimension / largerPic2Dimension; 
+if ( widthPic2Larger == true ) imageHeightRatioPic2 = smallerPic2Dimension / largerPic2Dimension; 
+if ( heightPic2Larger == true ) imageWidthRatioPic2 = smallerPic2Dimension / largerPic2Dimension; 
+if ( heightPic2Larger == true ) imageHeightRatioPic2 = largerPic2Dimension / largerPic2Dimension; 
 //
 rectXPic1 = displayWidth*1.4;
 rectYPic1 = displayHeight*0;
