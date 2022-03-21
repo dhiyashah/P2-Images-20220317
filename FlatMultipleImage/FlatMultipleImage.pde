@@ -42,16 +42,13 @@ if (pic2displayWidth >= pic2displayHeight) { //ID Larger Dimension: Landscape an
 println(smallerPic1Dimension, largerPic1Dimension, smallerPic2Dimension, largerPic2Dimension); //Verifying Variable Details (ID Larger Dimensions)
 // Note: single line IFs cam be summararized to IF-ELSE or IF-ELSEIF-ELSE
 if ( widthPic1Larger == true ) imageWidthRatioPic1 = largerPic1Dimension / largerPic1Dimension; 
-if ()imageHeightRatioPic1 = smallerPic1Dimension / largerPic1Dimension;  ; 
-if (); 
-if (); 
-if (); 
-if (); 
-if (); 
-if (); 
-if (); 
-if (); 
-if (); 
+if ( widthPic1Larger == true ) imageHeightRatioPic1 = smallerPic1Dimension / largerPic1Dimension;
+if ( heightPic1Larger == true ) imageHeightRatioPic1 = largerPic1Dimension / largerPic1Dimension; 
+if ( heightPic1Larger == true ) imageWidthRatioPic1 = smallerPic1Dimension / largerPic1Dimension; 
+if ( widthPic2Larger == true ) ; 
+if ( widthPic2Larger == true ) ; 
+if ( heightPic2Larger == true ) ; 
+if ( heightPic2Larger == true ) ; 
 //
 rectXPic1 = displayWidth*1.4;
 rectYPic1 = displayHeight*0;
