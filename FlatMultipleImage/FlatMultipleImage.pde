@@ -50,6 +50,13 @@ if ( widthPic2Larger == true ) imageHeightRatioPic2 = float (smallerPic2Dimensio
 if ( heightPic2Larger == true ) imageWidthRatioPic2 = float (smallerPic2Dimension) / float (largerPic2Dimension); 
 if ( heightPic2Larger == true ) imageHeightRatioPic2 = float (largerPic2Dimension) / float (largerPic2Dimension); 
 println(imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2); //Verifying Variable Details (Ratios)
+float pic1displayWidthAdjusted, pic1displayHeightAdjusted, pic2displayWidthAdjusted, pic2displayHeightAdjusted;
+pic1displayWidthAdjusted = pic1displayWidth * imageWidthRatioPic1;
+pic1displayHeightAdjusted = pic1displayHeight * imageHeightRatioPic1;
+pic2displayWidthAdjusted = pic2displayWidth * imageWidthRatioPic2;
+pic2displayHeightAdjusted = pic2displayHeight * imageHeightRatioPic2;
+println (pic1displayWidth, pic1displayHeight, pic2displayWidth, pic2displayHeight);
+println (pic1displayWidthAdjusted, pic1displayHeightAdjusted, pic2displayWidthAdjusted, pic2displayHeightAdjusted);
 //
 rectXPic1 = displayWidth*1/4;
 rectYPic1 = displayHeight*0;
@@ -65,5 +72,3 @@ rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape 
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation 
 image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
 image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
-//image(pic1);
-//iamge(pic2);
